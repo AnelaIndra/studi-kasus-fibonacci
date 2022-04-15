@@ -1,3 +1,29 @@
+int Operator :: iteratif_fibo(int n){
+  fibo1 = 1;
+  fibo2 = 2;
+  cout<<fibo1<<" "<<fibo2<<" ";
+  for (int i = 3; i<=n;i++){
+  
+    fn = fibo1 + fibo2;
+    fibo1 = fibo2;
+    fibo2 = fn;
+    cout<<fn<<" ";
+  }
+return fn;
+};
+
+int Operator::rekursif_fibo(int n){
+  if (n == 0){
+    return 0;
+  }
+  else if (n == 1){
+    return 1;
+  }
+  else {
+    return rekursif_fibo(n + 1) + rekursif_fibo(n + 2);
+  }
+  cout << rekursif_fibo(n) << " ";
+}
 
 int main(){
   int a;

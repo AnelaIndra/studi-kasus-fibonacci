@@ -1,9 +1,29 @@
+/*
+KRISNA CAKRA NINGRAT 449
+ANELA INDRA 454
+SASQIA AULIA NUR AINI 456
+*/
+
+#include<iostream>
+using namespace std;
+
+class Operator{
+  friend ostream& operator << (ostream&, Operator&);
+  friend istream& operator << (istream&, Operator&);
+
+public:
+  int iteratif_fibo(int n);
+  int rekursif_fibo(int n);
+
+private :
+int fibo1, fibo2, fn, n;
+};
+
 int Operator :: iteratif_fibo(int n){
   fibo1 = 1;
-  fibo2 = 2;
-  cout<<fibo1<<" "<<fibo2<<" ";
-  for (int i = 3; i<=n;i++){
-  
+  fibo2 = 1;
+  cout << fibo1 << " " << fibo2 << " ";
+  for (int i=3; i<=n; i++){
     fn = fibo1 + fibo2;
     fibo1 = fibo2;
     fibo2 = fn;
@@ -20,7 +40,7 @@ int Operator::rekursif_fibo(int n){
     return 1;
   }
   else {
-    return rekursif_fibo(n + 1) + rekursif_fibo(n + 2);
+    return rekursif_fibo(n - 1) + rekursif_fibo(n - 2);
   }
   cout << rekursif_fibo(n) << " ";
 }
